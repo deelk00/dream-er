@@ -2,12 +2,14 @@ import { IPoint } from './point.interface';
 import { DreamElement } from './render-element.class';
 import { MeshRenderer, rectangle, triangle } from './render-components/mesh-renderer';
 import { MoveableElement } from './render-components/moveable-element';
+import { RigidBody } from 'src/app/game-engine/element-components/rigid-body';
 
 export class TestRenderElement extends DreamElement {
   static create = (...args: any[]) => {
     const e = new TestRenderElement();
     e.addComponent(MeshRenderer);
     e.addComponent(MoveableElement);
+    e.addComponent(RigidBody);
     const meshRenderer = e.getComponent(MeshRenderer);
     meshRenderer.mesh = triangle;
     return e;

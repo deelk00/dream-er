@@ -31,6 +31,5 @@ export class MoveableElement extends DreamComponent {
       x: this.attachedElement.position.x + e.offsetFromLastPosition.x,
       y: this.attachedElement.position.y + e.offsetFromLastPosition.y
     }
-    console.log(this.attachedElement.position);
   };
 }
